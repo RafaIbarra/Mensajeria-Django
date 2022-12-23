@@ -1,0 +1,53 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+    <form action="{% url 'mensajes:registro_conversacion' %}" method="">
+    {% csrf_token %}
+    <fieldset>
+        <legend> <h1>{{ usuarios }}</h1></legend>
+            <!--<div>
+                {% include 'conversaciones.html' %}
+                
+            </div>-->
+            
+            {% comment %} <div align="left" id="elemento">
+                  <br>
+                  <br>
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                      MIS MENSAJES
+                    </div>
+                    <ul class="list-group list-group-flush" id="tarjeta">
+                      
+                    </ul>
+                  </div> {% endcomment %}
+            
+           
+            <div align=left id="Chat" style="width:400px; height:400px; overflow: scroll;"> 
+                
+                
+            </div>
+           
+           </div> 
+            <br>
+            <br>
+            <br>
+           <div align=left id="conversaciones" style="width:400px; height:400px; overflow: scroll;">
+                
+                
+           </div>
+            
+
+        </fieldset>
+        <br>
+        <br>
+        <input type="submit" value="Nuevo Mensaje">
+        
+    </form>
+       
+    
+    
+    
+    
+    
+{% endblock %}
