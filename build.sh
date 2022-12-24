@@ -10,4 +10,3 @@ python ./mensajeriaapp/manage.py collectstatic --no-input
 
 python ./mensajeriaapp/manage.py migrate
 
-python ./mensajeriaapp/manage.py tailwind build
