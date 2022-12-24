@@ -7,9 +7,7 @@ For more information on this file, see
 https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 """
 
-import importlib
-module_name = 'package'
-special_module = importlib.import_module(module_name, package=None)
+
 
 
 import os
