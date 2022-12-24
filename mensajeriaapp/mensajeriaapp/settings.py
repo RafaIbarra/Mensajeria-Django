@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'mensajeriaapp.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-       default='postgresql://django.db.backends.postgresql_psycopg2',
+       default='postgresql://postgres:postgres@localhost:5432/Mensajeria',
        conn_max_age=600
        
     )
