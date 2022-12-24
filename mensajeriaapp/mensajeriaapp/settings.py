@@ -39,13 +39,16 @@ if RENDER_EXTERNAL_HOSTNAME:
 # Application definition
 
 INSTALLED_APPS = [
-    "mensajes.apps.MensajesConfig",
+    # "mensajes.apps.MensajesConfig",
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'mensajes',
 ]
 
 MIDDLEWARE = [
@@ -84,9 +87,11 @@ WSGI_APPLICATION = 'mensajeriaapp.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': dj_database_url.config(
+        default='postgresql://postgres:postgres@localhost/postgres',
+        conn_max_age=600
+    )
 }
-
 # DATABASES = {
 #     'default': dj_database_url.config(
 
